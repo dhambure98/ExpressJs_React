@@ -4,6 +4,7 @@ const express = require('express')
 const app = express()
 const port = 4000
 
+//day 01 Lecture record 08
 //localhost req 
 app.get('/', (req, res) => {
     console.log('get request comming!');
@@ -15,6 +16,13 @@ app.get('/customer', (req, res) => {
     console.log('customer get come');
     res.send('<h1>Customer get req coming !!! </h1>')
 })
+
+//localhost req for item
+app.get('/item', (req, res) => {
+    console.log('item get come');
+    res.send('<h1>Item get req coming !!! </h1>')
+})
+
 
 app.listen(port, () => {
     console.log(`app listening on port ${port}`);
